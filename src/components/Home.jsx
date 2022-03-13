@@ -2,7 +2,7 @@ import React from "react";
 import milify from "millify";
 import { Typography, Row, Col, Statistic } from "antd";
 import { Link } from "react-router-dom";
-import { useGetCryptosQuery } from "../services/CryptoApi";
+import { useGetCryptosQuery } from "../services/cryptoApi";
 import Cryptocurrencies from "./Cryptocurrencies";
 
 const { Title } = Typography;
@@ -26,7 +26,7 @@ if(isFetching) return 'Loding...'
       </Row>
       <div className="home-heading-container">
         <Title level={2} className='home-title'>Top 10 Cryptocurrencies</Title>
-        <Title level={2} className='show-more'><Link to='/cryptocurrencies'>more</Link></Title>
+        <Title level={2} className='show-more'><Link to='/cryptocurrencies'><small>more</small></Link></Title>
       </div>
       <Cryptocurrencies simplified />
       <div className="home-heading-container">

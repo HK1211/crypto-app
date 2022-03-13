@@ -18,7 +18,7 @@ render(
      <Route path="/" element={<App />}>
         <Route index element={<Home />} />      
         <Route path="cryptocurrencies" element={<Cryptocurrencies />} >
-      <Route path="cryptocurrencies/:id" element={<CrytpoDetails />} />
+      <Route path="cryptocurrencies/:coinId" element={<CrytpoDetails />} />
         </Route>
       <Route path="news" element={<News />} />  
       </Route>    
