@@ -4,7 +4,8 @@ import App from "./App";
 import Home from "./components/Home";
 import Cryptocurrencies from "./components/Cryptocurrencies";
 import News from "./components/News";
-import CrytpoDetails from "./components/CrytpoDetails";
+import CryptoDetails from "./components/CryptoDetails";
+
 
 
 
@@ -18,8 +19,9 @@ render(
      <Route path="/" element={<App />}>
         <Route index element={<Home />} />      
         <Route path="cryptocurrencies" element={<Cryptocurrencies />} />
-        <Route path="crypto/:coinId" element={<CrytpoDetails />} />
+        <Route path="crypto/:coinId" element={<CryptoDetails />} />
       <Route path="news" element={<News />} />  
+       
       </Route>    
      
     </Routes>

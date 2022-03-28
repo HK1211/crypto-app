@@ -2,12 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Button, Menu, Typography, Avatar } from "antd";
 import {
   HomeOutlined,
-  MoneyCollectOutlined,
   BulbOutlined,
   FundOutlined,
   MenuOutlined,
 } from "@ant-design/icons";
-import icon from "../img/cryptocurrency.png";
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -35,25 +33,22 @@ function Navbar() {
   return (
     <div className="nav-container">
       <div className="logo-container">
-        <Avatar src={icon} size="large" />
+        <Link to='/'><Avatar src='https://www.vhv.rs/dpng/d/316-3166454_tezos-logo-png-transparent-png.png' size="large" /></Link>
         <Typography.Title level={2} className="logo">
-          <Link to="/">bitgram</Link>
+          <Link to="/">BitGram</Link>
           <Button className="menu-control-container" onClick={() => setActiveMenu(!activeMenu)}><MenuOutlined /></Button>
         </Typography.Title>
       </div>
       {activeMenu && (
       <Menu theme="dark">
         <Menu.Item icon={<HomeOutlined />}>
-          <Link to="/">Home</Link>
+          <Link to="/">홈</Link>
         </Menu.Item>
         <Menu.Item icon={<FundOutlined />}>
-          <Link to="/cryptocurrencies">Cryptocurrencies</Link>
-        </Menu.Item>
-        <Menu.Item icon={<MoneyCollectOutlined />}>
-          <Link to="/exchanges">Exchanges</Link>
+          <Link to="/cryptocurrencies">암호화폐</Link>
         </Menu.Item>
         <Menu.Item icon={<BulbOutlined />}>
-          <Link to="/news">News</Link>
+          <Link to="/news">코인뉴스</Link>
         </Menu.Item>
       </Menu>
       )}

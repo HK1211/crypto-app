@@ -10,7 +10,14 @@ function Cryptocurrencies({simplified}) {
   const {data: cryptoList, isFetching}= useGetCryptosQuery(count);
   const [cryptos, setcryptos] = useState(cryptoList?.data?.coins)
   const [searchTerm, setsearchTerm] = useState('')
-  console.log(cryptos)
+  
+  const coinChange=(n)=>{
+if(n>0){
+  return 'red'
+}else{
+  return 'blue'
+}
+  }
   useEffect(()=>{
     const filteredData=cryptoList?.data?.coins.filter((coin)=> coin.name.toLowerCase().includes(searchTerm));
     setcryptos(filteredData)
@@ -33,9 +40,9 @@ function Cryptocurrencies({simplified}) {
               extra={<img className='crypto-image' src={coin.iconUrl} />}
               hoverable
               >
-                <p>Price : {millify(coin.price)}</p>
-                <p>Market Cap : {millify(coin.marketCap)}</p>
-                <p>Daily Change : {millify(coin.change)} %</p>
+                <p>가격 : {millify(coin.price)}</p>
+                <p>시가총액 : {millify(coin.marketCap)}</p>
+                <p>전일대비 : <span className={coinChange(coin.change)}>{millify(coin.change)} %</span></p>
               </Card>
               </Link>
           </Col>
