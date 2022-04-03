@@ -5,8 +5,9 @@ import millify from 'millify';
 import { Col, Row, Typography, Select } from 'antd';
 import { MoneyCollectOutlined, DollarCircleOutlined, FundOutlined, ExclamationCircleOutlined, StopOutlined, TrophyOutlined, CheckOutlined, NumberOutlined, ThunderboltOutlined } from '@ant-design/icons';
 
-import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from '../services/cryptoApi';
+
 import LineChart from './LineChart';
+import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from '../services/CryptoApi';
 
 
 const { Title, Text } = Typography;

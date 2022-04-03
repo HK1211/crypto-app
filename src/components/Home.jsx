@@ -2,9 +2,10 @@ import React from "react";
 import milify from "millify";
 import { Typography, Row, Col, Statistic } from "antd";
 import { Link } from "react-router-dom";
-import { useGetCryptosQuery } from "../services/cryptoApi";
+
 import Cryptocurrencies from "./Cryptocurrencies";
 import News from "./News";
+import { useGetCryptosQuery } from "../services/CryptoApi";
 
 const { Title } = Typography;
 

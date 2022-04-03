@@ -6,10 +6,6 @@ import Cryptocurrencies from "./components/Cryptocurrencies";
 import News from "./components/News";
 import CryptoDetails from "./components/CryptoDetails";
 
-
-
-
-
 const rootElement = document.getElementById("root");
 render( 
   <BrowserRouter>
